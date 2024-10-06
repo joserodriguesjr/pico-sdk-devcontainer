@@ -1,0 +1,35 @@
+{
+    "name": "Pico SDK Dev",
+    "dockerComposeFile": "compose.yml",
+    "service": "pico-dev",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-themes",
+                "ms-vscode.cpptools-extension-pack",
+                "ms-vscode.cmake-tools",
+                "twxs.cmake",
+                "xaver.clang-format",
+                "llvm-vs-code-extensions.vscode-clangd"
+            ],
+        "settings": {
+          "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+          "C_Cpp.intelliSenseEngine": "disabled",
+          // "C_Cpp.default.cStandard": "c99",
+          // "C_Cpp.default.cppStandard": "c++17",
+          "C_Cpp.default.compileCommands": "/workspace/build/compile_commands.json",
+
+          "clangd.path": "/usr/bin/clangd",
+          "clangd.arguments": [
+            "-log=verbose", 
+            "-pretty", 
+            "--background-index",
+            "--compile-commands-dir=/workspace/build"
+          ]
+        }
+      }
+    }
+  }
+  
