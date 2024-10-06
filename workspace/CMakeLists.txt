@@ -24,4 +24,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 #### PROJECTS ####
 
-add_subdirectory(flappy)
+add_subdirectory(src)
