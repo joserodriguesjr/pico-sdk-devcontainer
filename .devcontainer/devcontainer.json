@@ -1,8 +1,9 @@
 {
     "name": "Pico SDK Dev",
-    "dockerComposeFile": "compose.yml",
-    "service": "pico-dev",
-    "workspaceFolder": "/workspace",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "onCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -19,14 +20,14 @@
           "C_Cpp.intelliSenseEngine": "disabled",
           // "C_Cpp.default.cStandard": "c99",
           // "C_Cpp.default.cppStandard": "c++17",
-          "C_Cpp.default.compileCommands": "/workspace/build/compile_commands.json",
+          "C_Cpp.default.compileCommands": "/build/compile_commands.json",
 
           "clangd.path": "/usr/bin/clangd",
           "clangd.arguments": [
             "-log=verbose", 
             "-pretty", 
             "--background-index",
-            "--compile-commands-dir=/workspace/build"
+            "--compile-commands-dir=/build"
           ]
         }
       }

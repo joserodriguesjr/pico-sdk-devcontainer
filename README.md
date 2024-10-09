@@ -8,11 +8,10 @@ It creates an Ubuntu image and downloads the pico-sdk, picotool and clangd for a
 
 - `.devcontainer/devcontainer.json`: Contains the dev container configuration files for VS Code.
 - `.devcontainer/Dockerfile`: The Docker image definition used to create the development environment.
-- `.devcontainer/compose.yml`: Docker Compose file to manage the docker container.
-- `workspace/src`: Folder containing your code.
-- `workspace/clangd`: Include headers for clangd.
-- `workspace/CMakeLists.txt`: CMake configuration file for building your project.
-- `workspace/build/`: Folder where the build artifacts will be generated.
+- `src/`: Folder containing your code.
+- `build/`: Folder where the build artifacts will be generated.
+- `CMakeLists.txt`: CMake configuration file for building your project.
+- `.clangd`: Include headers for clangd.
 
 ## Getting Started
 

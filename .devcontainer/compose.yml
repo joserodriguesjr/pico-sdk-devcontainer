@@ -1,9 +1,0 @@
-services:
-  pico-dev:
-    build: .
-    volumes:
-      - ../workspace:/workspace # Mount your code directory into the container
-      #ports:
-      #  - "1234:1234"
-    tty: true
-    stdin_open: true
